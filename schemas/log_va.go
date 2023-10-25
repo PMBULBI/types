@@ -17,7 +17,6 @@ type LogVA struct {
 	StatusExtendExp string        `gorm:"column:status_extend_exp" json:"status_extend_exp"`
 }
 
-// TableName LogVaPoltek's table name
 func (*LogVA) TableName() string {
 	return "log_va"
 }
