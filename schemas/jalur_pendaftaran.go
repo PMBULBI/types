@@ -8,7 +8,6 @@ type JalurPendaftaran struct {
 	Status          string `gorm:"column:status;default:nonaktif" json:"status"`
 }
 
-// TableName JalurPendaftaran's table name
 func (*JalurPendaftaran) TableName() string {
 	return "jalur_pendaftaran"
 }
