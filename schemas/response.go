@@ -6,7 +6,7 @@ type ProvinsiResponse struct {
 }
 
 type KotaResponse struct {
-	IDKabupaten   string `json:"id_kabupaten"`
-	IDProvinsi    string `json:"id_provinsi"`
-	NamaKabupaten string `json:"nama_kabupaten"`
+	IDKota     string `json:"id_kota"`
+	IDProvinsi string `json:"id_provinsi"`
+	NamaKota   string `json:"nama_kota"`
 }
