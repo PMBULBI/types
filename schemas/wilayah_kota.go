@@ -1,9 +1,9 @@
 package schemas
 
 type WilayahKota struct {
-	IDKabupaten   string `gorm:"column:id_kabupaten;primaryKey" json:"id_kabupaten"`
-	IDProvinsi    string `gorm:"column:id_provinsi" json:"id_provinsi"`
-	NamaKabupaten string `gorm:"column:nama_kabupaten" json:"nama_kabupaten"`
+	IDKota     string `gorm:"column:id_kota;primaryKey" json:"id_kota"`
+	IDProvinsi string `gorm:"column:id_provinsi" json:"id_provinsi"`
+	NamaKota   string `gorm:"column:nama_kota" json:"nama_kota"`
 }
 
 func (*WilayahKota) TableName() string {
