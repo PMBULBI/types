@@ -5,7 +5,7 @@ import (
 )
 
 type LogVA struct {
-	IDLog           int64         `gorm:"column:id_log;primaryKey;autoIncrement:true" json:"id_log"`
+	IDLog           int           `gorm:"column:id_log;primaryKey;autoIncrement:true" json:"id_log"`
 	Email           string        `gorm:"column:email" json:"email"`
 	TrxID           string        `gorm:"column:trx_id" json:"trx_id"`
 	VirtualAccount  string        `gorm:"column:virtual_account" json:"virtual_account"`
