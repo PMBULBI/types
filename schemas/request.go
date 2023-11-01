@@ -13,3 +13,8 @@ type Request struct {
 type RequestDftSekolah struct {
 	NamaSekolah string `json:"nama_sekolah"`
 }
+
+type RequestLogin struct {
+	Email    string `json:"email_mhs"`
+	Password string `json:"password"`
+}
