@@ -10,3 +10,7 @@ type KotaResponse struct {
 	IDProvinsi string `json:"id_provinsi"`
 	NamaKota   string `json:"nama_kota"`
 }
+
+type ResponseLogin struct {
+	Email string `json:"email_mhs"`
+}
