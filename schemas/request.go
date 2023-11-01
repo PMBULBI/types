@@ -9,3 +9,7 @@ type Request struct {
 	KotaSekolah     string `gorm:"column:kota_sekolah" json:"kota_sekolah"`
 	UsernameAdmin   string `gorm:"column:username_admin" json:"username_admin"`
 }
+
+type RequestDftSekolah struct {
+	NamaSekolah string `json:"nama_sekolah"`
+}
