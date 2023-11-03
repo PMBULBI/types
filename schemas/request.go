@@ -14,6 +14,10 @@ type RequestDftSekolah struct {
 	NamaSekolah string `json:"nama_sekolah"`
 }
 
+type RequestNmProvinsi struct {
+	NamaProvinsi string `json:"nama_provinsi"`
+}
+
 type RequestLogin struct {
 	Email    string `json:"email_mhs"`
 	Password string `json:"password"`
