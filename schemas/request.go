@@ -22,6 +22,11 @@ type RequestIdProvinsi struct {
 	IdProvinsi string `json:"id_provinsi"`
 }
 
+type RequestIdProvinsiNmKota struct {
+	IdProvinsi string `json:"id_provinsi"`
+	NamaKota   string `json:"nama_kota"`
+}
+
 type RequestLogin struct {
 	Email    string `json:"email_mhs"`
 	Password string `json:"password"`
