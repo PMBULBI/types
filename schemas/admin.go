@@ -11,6 +11,7 @@ type Admin struct {
 	Password      string        `gorm:"column:password;not null" json:"password"`
 	TglBuatAkun   carbon.Carbon `gorm:"column:tgl_buat_akun;not null" json:"tgl_buat_akun"`
 	IsAktif       bool          `gorm:"column:aktif" json:"aktif"`
+	Level         int           `gorm:"column:level" json:"level"`
 }
 
 func (*Admin) TableName() string {
