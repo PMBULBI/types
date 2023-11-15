@@ -33,3 +33,15 @@ type ResponsePendaftaran struct {
 	UsernameAdmin   string          `json:"username_admin,omitempty"`
 	TglDaftarMhs    carbon.DateTime `json:"tgl_daftar_mhs,omitempty"`
 }
+
+type ResponseAdmin struct {
+	IDAdmin       int             `json:"id_admin,omitempty"`
+	NamaAdmin     string          `json:"nama_admin,omitempty"`
+	UsernameAdmin string          `json:"username,omitempty"`
+	Email         string          `json:"email,omitempty"`
+	NoHp          string          `json:"no_hp,omitempty"`
+	Password      string          `json:"password,omitempty"`
+	TglBuatAkun   carbon.DateTime `json:"tgl_buat_akun,omitempty"`
+	IsAktif       bool            `json:"aktif,omitempty"`
+	Level         int             `json:"level,omitempty"`
+}
