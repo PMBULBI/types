@@ -8,6 +8,7 @@ import (
 type Pendaftaran struct {
 	ID              int            `gorm:"column:id;primaryKey;autoIncrement:true" json:"id"`
 	NamaMhs         string         `gorm:"column:nama_mhs;not null" json:"nama_mhs"`
+	Tahun           string         `gorm:"column:tahun;not null" json:"tahun"`
 	AsalSekolah     string         `gorm:"column:asal_sekolah;not null" json:"asal_sekolah"`
 	EmailMhs        string         `gorm:"column:email_mhs;not null" json:"email_mhs"`
 	HpMhs           string         `gorm:"column:hp_mhs;not null" json:"hp_mhs"`
