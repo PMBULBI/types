@@ -10,7 +10,7 @@ type Admin struct {
 	NoHp          string        `gorm:"column:no_hp;not null" json:"no_hp"`
 	Password      string        `gorm:"column:password;not null" json:"password"`
 	TglBuatAkun   carbon.Carbon `gorm:"column:tgl_buat_akun;not null" json:"tgl_buat_akun"`
-	IsAktif       bool          `gorm:"column:aktif" json:"aktif"`
+	IsAktif       int           `gorm:"column:aktif" json:"aktif"`
 	Level         int           `gorm:"column:level" json:"level"`
 }
 
