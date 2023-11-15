@@ -20,15 +20,16 @@ type ResponseLogin struct {
 }
 
 type ResponsePendaftaran struct {
-	ID              int             `json:"id"`
-	NamaMhs         string          `json:"nama_mhs"`
-	AsalSekolah     string          `json:"asal_sekolah"`
-	EmailMhs        string          `json:"email_mhs"`
-	HpMhs           string          `json:"hp_mhs"`
-	ProvinsiSekolah string          `json:"provinsi_sekolah"`
-	KotaSekolah     string          `json:"kota_sekolah"`
-	Password        string          `json:"password"`
-	StatusMhs       int             `json:"status_mhs"`
-	UsernameAdmin   string          `json:"username_admin"`
-	TglDaftarMhs    carbon.DateTime `json:"tgl_daftar_mhs"`
+	ID              int             `json:"id,omitempty"`
+	NamaMhs         string          `json:"nama_mhs,omitempty"`
+	Tahun           string          `json:"tahun,omitempty"`
+	AsalSekolah     string          `json:"asal_sekolah,omitempty"`
+	EmailMhs        string          `json:"email_mhs,omitempty"`
+	HpMhs           string          `json:"hp_mhs,omitempty"`
+	ProvinsiSekolah string          `json:"provinsi_sekolah,omitempty"`
+	KotaSekolah     string          `json:"kota_sekolah,omitempty"`
+	Password        string          `json:"password,omitempty"`
+	StatusMhs       int             `json:"status_mhs,omitempty"`
+	UsernameAdmin   string          `json:"username_admin,omitempty"`
+	TglDaftarMhs    carbon.DateTime `json:"tgl_daftar_mhs,omitempty"`
 }
