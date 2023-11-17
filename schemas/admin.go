@@ -12,7 +12,7 @@ type Admin struct {
 	TglBuatAkun   carbon.Carbon `gorm:"column:tgl_buat_akun;not null" json:"tgl_buat_akun"`
 	IsAktif       int           `gorm:"column:aktif" json:"aktif"`
 	Level         int           `gorm:"column:level" json:"level"`
-	KodeRef       string        `gorm:"column:kode_ref" json:"kode_ref"`
+	KodeRef       string        `gorm:"column:kode_ref;not null" json:"kode_ref"`
 }
 
 func (*Admin) TableName() string {
