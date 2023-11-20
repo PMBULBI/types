@@ -18,6 +18,7 @@ type Pendaftaran struct {
 	StatusMhs       int            `gorm:"column:status_mhs;not null;default:0" json:"status_mhs"`
 	UsernameAdmin   sql.NullString `gorm:"column:username_admin" json:"username_admin"`
 	TglDaftarMhs    carbon.Carbon  `gorm:"column:tgl_daftar_mhs;not null" json:"tgl_daftar_mhs"`
+	IdBiodata       sql.NullString `gorm:"column:id_biodata" json:"id_biodata"`
 }
 
 func (*Pendaftaran) TableName() string {
