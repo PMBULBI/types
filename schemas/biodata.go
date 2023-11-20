@@ -36,6 +36,18 @@ type BiodataDataDiri struct {
 	Email            string      `gorm:"column:email;not null" json:"email"`
 }
 
+type BiodataDataOrtu struct {
+	IdHash                  string `gorm:"column:id_hash;primaryKey" json:"id_hash"`
+	NamaAyahKandung         string `gorm:"column:nama_ayah_kandung;not null" json:"nama_ayah_kandung"`
+	HpAyahKandung           string `gorm:"column:hp_ayah_kandung;not null" json:"hp_ayah_kandung"`
+	NamaIbuKandung          string `gorm:"column:nama_ibu_kandung;not null" json:"nama_ibu_kandung"`
+	HpIbuKandung            string `gorm:"column:hp_ibu_kandung" json:"hp_ibu_kandung"`
+	PekerjaanOrangTuaWali   string `gorm:"column:pekerjaan_orang_tua_wali;not null" json:"pekerjaan_orang_tua_wali"`
+	AlamatOrangTuaWali      string `gorm:"column:alamat_orang_tua_wali;not null" json:"alamat_orang_tua_wali"`
+	PenghasilanOrangTuaWali string `gorm:"column:penghasilan_orang_tua_wali;not null" json:"penghasilan_orang_tua_wali"`
+	SumberDana              string `gorm:"column:sumber_dana" json:"sumber_dana"`
+}
+
 func (*BiodataJalur) TableName() string {
 	return "biodata_jalur"
 }
@@ -43,6 +55,11 @@ func (*BiodataJalur) TableName() string {
 func (*BiodataProdi) TableName() string {
 	return "biodata_prodi"
 }
+
 func (*BiodataDataDiri) TableName() string {
 	return "biodata_data_diri"
+}
+
+func (*BiodataDataOrtu) TableName() string {
+	return "biodata_data_ortu"
 }
