@@ -48,6 +48,23 @@ type BiodataDataOrtu struct {
 	SumberDana              string `gorm:"column:sumber_dana" json:"sumber_dana"`
 }
 
+type BiodataDataSekolah struct {
+	IdHash            string `gorm:"column:id_hash;primaryKey" json:"id_hash"`
+	Nisn              string `gorm:"column:nisn" json:"nisn,omitempty"`
+	AsalJurusan       string `gorm:"column:asal_jurusan" json:"asal_jurusan"`
+	AsalSekolah       string `gorm:"column:asal_sekolah;not null" json:"asal_sekolah"`
+	AlamatSekolah     string `gorm:"column:alamat_sekolah;not null" json:"alamat_sekolah"`
+	KotaSekolah       string `gorm:"column:kota_sekolah;not null" json:"kota_sekolah"`
+	ProvinsiSekolah   string `gorm:"column:provinsi_sekolah;not null" json:"provinsi_sekolah"`
+	KodePosSekolah    string `gorm:"column:kode_pos_sekolah" json:"kode_pos_sekolah"`
+	JenisSekolah      string `gorm:"column:jenis_sekolah" json:"jenis_sekolah"`
+	Jurusan           string `gorm:"column:jurusan" json:"jurusan"`
+	AkreditasiSekolah string `gorm:"column:akreditasi_sekolah" json:"akreditasi_sekolah"`
+	TahunLulus        int32  `gorm:"column:tahun_lulus" json:"tahun_lulus"`
+	GuruBk            string `gorm:"column:guru_bk" json:"guru_bk,omitempty"`
+	HpGuruBk          string `gorm:"column:hp_guru_bk" json:"hp_guru_bk,omitempty"`
+}
+
 func (*BiodataJalur) TableName() string {
 	return "biodata_jalur"
 }
@@ -62,4 +79,8 @@ func (*BiodataDataDiri) TableName() string {
 
 func (*BiodataDataOrtu) TableName() string {
 	return "biodata_data_ortu"
+}
+
+func (*BiodataDataSekolah) TableName() string {
+	return "biodata_data_sekolah"
 }
