@@ -3,7 +3,18 @@ package schemas
 import (
 	"database/sql"
 	"github.com/golang-module/carbon/v2"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
+
+type BiodataMaster struct {
+	ID            string `gorm:"column:id;primaryKey" json:"id"`
+	IdJalur       string `gorm:"column:id_jalur" json:"id_jalur"`
+	IdProdi       string `gorm:"column:id_prodi" json:"id_prodi"`
+	IdDataDiri    string `gorm:"column:id_data_diri" json:"id_data_diri"`
+	IdDataOrtu    string `gorm:"column:id_data_ortu" json:"id_data_ortu"`
+	IdDataSekolah string `gorm:"column:id_data_sek" json:"id_data_sek"`
+	IdDataBerkas  string `gorm:"column:id_data_berkas" json:"id_data_berkas"`
+}
 
 type BiodataJalur struct {
 	IdHash     string `gorm:"column:id_hash;primaryKey" json:"id_hash"`
@@ -163,6 +174,24 @@ type BiodataDataBerkas struct {
 	SuratKeteranganBekerja         sql.NullString `gorm:"column:surat_keterangan_bekerja" json:"surat_keterangan_bekerja"`
 	SuratKeteranganSehat           sql.NullString `gorm:"column:surat_keterangan_sehat" json:"surat_keterangan_sehat"`
 	SkPengangkatanKaryawan         sql.NullString `gorm:"column:sk_pengangkatan_karyawan" json:"sk_pengangkatan_karyawan"`
+}
+
+type BerkasSemester struct {
+	ID            primitive.ObjectID   `bson:"_id,omitempty" json:"_id,omitempty"`
+	Nilai         *[]DataNilaiSemester `bson:"nilai" json:"nilai"`
+	FilesSemester *[]FileSemester      `bson:"files_semester" json:"files_semester"`
+	FileGeneric   *[]FileGeneric       `bson:"file_generic" json:"file_generic"`
+}
+
+type DataNilaiSemester struct {
+	ID            primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
+	Semester      int                `bson:"semester" json:"id_semester"`
+	MataPelajaran string             `bson:"mata_pelajaran" json:"mata_pelajaran"`
+	Nilai         string             `bson:"nilai" json:"nilai"`
+}
+
+func (*BiodataMaster) TableName() string {
+	return "biodata_master"
 }
 
 func (*BiodataJalur) TableName() string {
