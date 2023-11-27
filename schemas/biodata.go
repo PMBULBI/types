@@ -176,7 +176,7 @@ type BiodataDataBerkas struct {
 	SkPengangkatanKaryawan         sql.NullString `gorm:"column:sk_pengangkatan_karyawan" json:"sk_pengangkatan_karyawan"`
 }
 
-type BerkasSemester struct {
+type BerkasPendaftaran struct {
 	ID            primitive.ObjectID   `bson:"_id,omitempty" json:"_id,omitempty"`
 	Nilai         *[]DataNilaiSemester `bson:"nilai" json:"nilai"`
 	FilesSemester *[]FileSemester      `bson:"files_semester" json:"files_semester"`
