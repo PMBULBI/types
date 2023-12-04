@@ -2,7 +2,7 @@ package schemas
 
 type WilayahKecamatan struct {
 	IDKecamatan   string `gorm:"column:id_kecamatan;primaryKey" json:"id_kecamatan"`
-	IDKabupaten   string `gorm:"column:id_kabupaten" json:"id_kabupaten"`
+	IDKota        string `gorm:"column:id_kota" json:"id_kota"`
 	NamaKecamatan string `gorm:"column:nama_kecamatan" json:"nama_kecamatan"`
 }
 
