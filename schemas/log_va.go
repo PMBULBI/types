@@ -8,7 +8,7 @@ type LogVA struct {
 	IDLog           int           `gorm:"column:id_log;primaryKey;autoIncrement:true" json:"id_log"`
 	Email           string        `gorm:"column:email" json:"email"`
 	TrxID           string        `gorm:"column:trx_id" json:"trx_id"`
-	VirtualAccount  string        `gorm:"column:virtual_account" json:"virtual_account"`
+	VirtualAccount  int64         `gorm:"column:virtual_account" json:"virtual_account"`
 	TrxAmount       int           `gorm:"column:trx_amount" json:"trx_amount"`
 	JenisBayar      string        `gorm:"column:jenis_bayar" json:"jenis_bayar"`
 	TglCreate       carbon.Carbon `gorm:"column:tgl_create" json:"tgl_create"`
@@ -18,5 +18,5 @@ type LogVA struct {
 }
 
 func (*LogVA) TableName() string {
-	return "log_va"
+	return "log_va_poltek"
 }
