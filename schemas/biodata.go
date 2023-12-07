@@ -7,13 +7,14 @@ import (
 )
 
 type BiodataMaster struct {
-	ID            string `gorm:"column:id;primaryKey" json:"id"`
-	IdJalur       string `gorm:"column:id_jalur" json:"id_jalur"`
-	IdProdi       string `gorm:"column:id_prodi" json:"id_prodi"`
-	IdDataDiri    string `gorm:"column:id_data_diri" json:"id_data_diri"`
-	IdDataOrtu    string `gorm:"column:id_data_ortu" json:"id_data_ortu"`
-	IdDataSekolah string `gorm:"column:id_data_sek" json:"id_data_sek"`
-	IdDataBerkas  string `gorm:"column:id_data_berkas" json:"id_data_berkas"`
+	ID            string       `gorm:"column:id;primaryKey" json:"id"`
+	IdJalur       string       `gorm:"column:id_jalur" json:"id_jalur"`
+	IdProdi       string       `gorm:"column:id_prodi" json:"id_prodi"`
+	IdDataDiri    string       `gorm:"column:id_data_diri" json:"id_data_diri"`
+	IdDataOrtu    string       `gorm:"column:id_data_ortu" json:"id_data_ortu"`
+	IdDataSekolah string       `gorm:"column:id_data_sek" json:"id_data_sek"`
+	IdDataBerkas  string       `gorm:"column:id_data_berkas" json:"id_data_berkas"`
+	TglDaftar     sql.NullTime `gorm:"column:tgl_daftar" json:"tgl_daftar"`
 }
 
 type BiodataJalur struct {
