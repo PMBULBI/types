@@ -13,6 +13,7 @@ type JalurProdiWithProdi struct {
 	ProgramStudi     string `gorm:"column:program_studi" json:"program_studi"`
 }
 
+// ini untuk mengubah nama tabel
 func (*JalurProdi) TableName() string {
 	return "jalur_prodi"
 }
