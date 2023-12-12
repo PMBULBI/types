@@ -78,6 +78,8 @@ type BiodataDataSekolah struct {
 	AlamatSekolah     string         `gorm:"column:alamat_sekolah;not null" json:"alamat_sekolah"`
 	KotaSekolah       string         `gorm:"column:kota_sekolah;not null" json:"kota_sekolah"`
 	ProvinsiSekolah   string         `gorm:"column:provinsi_sekolah;not null" json:"provinsi_sekolah"`
+	KecamatanSekolah  string         `gorm:"column:kecamatan_sekolah" json:"kecamatan_sekolah"`
+	KelurahanSekolah  string         `gorm:"column:kelurahan_sekolah" json:"kelurahan_sekolah"`
 	KodePosSekolah    string         `gorm:"column:kode_pos_sekolah" json:"kode_pos_sekolah"`
 	JenisSekolah      string         `gorm:"column:jenis_sekolah" json:"jenis_sekolah"`
 	Jurusan           string         `gorm:"column:jurusan" json:"jurusan"`
