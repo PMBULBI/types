@@ -18,11 +18,12 @@ type BiodataMaster struct {
 }
 
 type BiodataJalur struct {
-	IdHash     string `gorm:"column:id_hash;primaryKey" json:"id_hash"`
-	freezed    bool   `gorm:"column:freezed" json:"freezed"`
-	IDJalur    int    `gorm:"column:id_jalur" json:"id_jalur"`
-	TahunLulus int    `gorm:"column:tahun_lulus;not null" json:"tahun_lulus"`
-	KodeRef    string `gorm:"column:kode_ref;not null" json:"kode_ref"`
+	IdHash     string        `gorm:"column:id_hash;primaryKey" json:"id_hash"`
+	freezed    bool          `gorm:"column:freezed" json:"freezed"`
+	IDJalur    int           `gorm:"column:id_jalur" json:"id_jalur"`
+	IDJalur2   sql.NullInt16 `gorm:"column:id_jalur2" json:"id_jalur2"`
+	TahunLulus int           `gorm:"column:tahun_lulus;not null" json:"tahun_lulus"`
+	KodeRef    string        `gorm:"column:kode_ref;not null" json:"kode_ref"`
 }
 
 type BiodataProdi struct {
