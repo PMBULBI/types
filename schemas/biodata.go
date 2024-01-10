@@ -50,6 +50,7 @@ type BiodataDataDiri struct {
 	KodePos           string         `gorm:"column:kode_pos" json:"kode_pos"`
 	TglDaftar         sql.NullTime   `gorm:"column:tgl_daftar" json:"tgl_daftar"`
 	StatusKelulusan   sql.NullString `gorm:"column:status_kelulusan" json:"status_kelulusan"`
+	StatusPersetujuan sql.NullString `gorm:"column:status_persetujuan" json:"status_persetujuan"`
 	StatusDaftarUlang sql.NullString `gorm:"column:status_daftar_ulang" json:"status_daftar_ulang"`
 	TglDaftarUlang    sql.NullTime   `gorm:"column:tgl_daftar_ulang" json:"tgl_daftar_ulang"`
 	NoPendaftaranKip  sql.NullString `gorm:"column:no_pendaftaran_kip" json:"no_pendaftaran_kip"`
