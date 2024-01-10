@@ -57,6 +57,7 @@ type BiodataDataDiri struct {
 	JumlahSks         sql.NullInt16  `gorm:"column:jumlah_sks" json:"jumlah_sks"`
 	Npm               sql.NullString `gorm:"column:npm" json:"npm"`
 	TanggalLahir      carbon.Carbon  `gorm:"column:tanggal_lahir;not null" json:"tanggal_lahir"`
+	StatusUndurDiri   sql.NullString `gorm:"column:status_undur_diri" json:"status_undur_diri"`
 }
 
 type BiodataDataOrtu struct {
