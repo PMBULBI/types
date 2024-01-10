@@ -36,25 +36,26 @@ type BiodataProdi struct {
 }
 
 type BiodataDataDiri struct {
-	IdHash           string         `gorm:"column:id_hash;primaryKey" json:"id_hash"`
-	freezed          bool           `gorm:"column:freezed" json:"freezed"`
-	JenisKelamin     string         `gorm:"column:jenis_kelamin;not null" json:"jenis_kelamin"`
-	Nik              string         `gorm:"column:nik" json:"nik"`
-	TempatLahir      string         `gorm:"column:tempat_lahir;not null" json:"tempat_lahir"`
-	Agama            string         `gorm:"column:agama;not null" json:"agama"`
-	Alamat           string         `gorm:"column:alamat;not null" json:"alamat"`
-	Provinsi         string         `gorm:"column:provinsi;not null" json:"provinsi"`
-	Kota             string         `gorm:"column:kota;not null" json:"kota"`
-	Kecamatan        string         `gorm:"column:kecamatan" json:"kecamatan"`
-	Kelurahan        string         `gorm:"column:kelurahan" json:"kelurahan"`
-	KodePos          string         `gorm:"column:kode_pos" json:"kode_pos"`
-	TglDaftar        sql.NullTime   `gorm:"column:tgl_daftar" json:"tgl_daftar"`
-	StatusKelulusan  sql.NullString `gorm:"column:status_kelulusan" json:"status_kelulusan"`
-	TglDaftarUlang   sql.NullTime   `gorm:"column:tgl_daftar_ulang" json:"tgl_daftar_ulang"`
-	NoPendaftaranKip sql.NullString `gorm:"column:no_pendaftaran_kip" json:"no_pendaftaran_kip"`
-	JumlahSks        sql.NullInt16  `gorm:"column:jumlah_sks" json:"jumlah_sks"`
-	Npm              sql.NullString `gorm:"column:npm" json:"npm"`
-	TanggalLahir     carbon.Carbon  `gorm:"column:tanggal_lahir;not null" json:"tanggal_lahir"`
+	IdHash            string         `gorm:"column:id_hash;primaryKey" json:"id_hash"`
+	freezed           bool           `gorm:"column:freezed" json:"freezed"`
+	JenisKelamin      string         `gorm:"column:jenis_kelamin;not null" json:"jenis_kelamin"`
+	Nik               string         `gorm:"column:nik" json:"nik"`
+	TempatLahir       string         `gorm:"column:tempat_lahir;not null" json:"tempat_lahir"`
+	Agama             string         `gorm:"column:agama;not null" json:"agama"`
+	Alamat            string         `gorm:"column:alamat;not null" json:"alamat"`
+	Provinsi          string         `gorm:"column:provinsi;not null" json:"provinsi"`
+	Kota              string         `gorm:"column:kota;not null" json:"kota"`
+	Kecamatan         string         `gorm:"column:kecamatan" json:"kecamatan"`
+	Kelurahan         string         `gorm:"column:kelurahan" json:"kelurahan"`
+	KodePos           string         `gorm:"column:kode_pos" json:"kode_pos"`
+	TglDaftar         sql.NullTime   `gorm:"column:tgl_daftar" json:"tgl_daftar"`
+	StatusKelulusan   sql.NullString `gorm:"column:status_kelulusan" json:"status_kelulusan"`
+	StatusDaftarUlang sql.NullString `gorm:"column:status_daftar_ulang" json:"status_daftar_ulang"`
+	TglDaftarUlang    sql.NullTime   `gorm:"column:tgl_daftar_ulang" json:"tgl_daftar_ulang"`
+	NoPendaftaranKip  sql.NullString `gorm:"column:no_pendaftaran_kip" json:"no_pendaftaran_kip"`
+	JumlahSks         sql.NullInt16  `gorm:"column:jumlah_sks" json:"jumlah_sks"`
+	Npm               sql.NullString `gorm:"column:npm" json:"npm"`
+	TanggalLahir      carbon.Carbon  `gorm:"column:tanggal_lahir;not null" json:"tanggal_lahir"`
 }
 
 type BiodataDataOrtu struct {
